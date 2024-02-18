@@ -1,0 +1,88 @@
+:root {
+    --grey-border: #c8c8c8;
+    --grey-back: #eee;
+    --true: rgba(124, 218, 119, .5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    padding: 3.2rem 0;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.table {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.trow {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-around;
+    border-top: 1px solid var(--grey-border);
+}
+
+.trow:first-child {
+    background-color: var(--grey-back);
+    font-weight: 500;
+}
+
+.trow:last-child {
+    border-bottom: 1px solid var(--grey-border);
+}
+
+.tcell {
+    padding: 1rem 0;
+    text-align: center;
+    border-left: 1px solid var(--grey-border);
+}
+
+.tcell:last-child {
+    border-right: 1px solid var(--grey-border);
+}
+
+#truth-table .tcell {
+    width: 20%;
+}
+
+#truth-table .tcell:first-child, #truth-table .tcell:nth-child(2) {
+    width: 10%;
+}
+
+#flexible-comparison .tcell,
+#tough-comparison .tcell {
+    width: 11.11%;
+}
+
+#flexible-comparison .tcell:first-child,
+#tough-comparison .tcell:first-child {
+    background-color: var(--grey-back);
+    font-weight: 500;
+}
+
+.true {
+    background-color: var(--true);
+}
