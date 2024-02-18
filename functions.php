@@ -19,6 +19,6 @@ function getNameCell($item) : string
     } elseif (is_null($item)) {
         return 'null';
     } else {
-        return $item;
+        return "$item";
     }
 }
