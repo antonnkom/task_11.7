@@ -1,7 +1,10 @@
 :root {
     --grey-border: #c8c8c8;
-    --grey-back: #eee;
+    --grey-back-odd: #eee;
+    --grey-back-even: #e2e2e2;
     --true: rgba(124, 218, 119, .5);
+    --base: #1a355b;
+    --bacground: #202125; 
 }
 
 * {
@@ -13,8 +16,21 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+header, footer {
+    padding: 1rem 0;
+    background-color: var(--base);
+}
+
 section {
     padding: 3.2rem 0;
+}
+
+section:nth-child(odd) {
+    background-color: var(--grey-back-odd);
+}
+
+section:nth-child(even) {
+    background-color: var(--grey-back-even);
 }
 
 .container {
@@ -22,8 +38,17 @@ section {
     margin: 0 auto;
 }
 
+h1, p {
+    text-align: center;
+    color: #fff;
+}
+
 p {
     font-size: 1rem;
+}
+
+h1 {
+    font-weight: 500;
 }
 
 h2 {
@@ -31,6 +56,16 @@ h2 {
     font-weight: 500;
     text-align: center;
     margin: 1rem 0;
+}
+
+h2::after {
+    content: "";
+    height: 0.25rem;
+    width: 10rem;
+    background-color: var(--base);
+    display: block;
+    margin: 1rem auto;
+    border-radius: 50%;
 }
 
 .table {
@@ -43,11 +78,13 @@ h2 {
     box-sizing: border-box;
     justify-content: space-around;
     border-top: 1px solid var(--grey-border);
+    background-color: #fff;
 }
 
 .trow:first-child {
-    background-color: var(--grey-back);
+    background-color: var(--base);
     font-weight: 500;
+    color: #fff;
 }
 
 .trow:last-child {
@@ -79,8 +116,9 @@ h2 {
 
 #flexible-comparison .tcell:first-child,
 #tough-comparison .tcell:first-child {
-    background-color: var(--grey-back);
+    background-color: var(--base);
     font-weight: 500;
+    color: #fff;
 }
 
 .true {

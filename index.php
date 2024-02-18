@@ -9,6 +9,11 @@
     <title>Таблицы истинности и сравнения на PHP</title>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Введение в PHP</h1>
+        </div>
+    </header>
     <main>
         <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/functions.php'; ?>
 
@@ -98,5 +103,11 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <?= date('Y') === '2024' ? date('Y') : '2024-' . date('Y') ?> Anton Komarov</p>
+        </div>
+    </footer>
 </body>
 </html>
